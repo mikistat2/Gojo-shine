@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* keep anchored sections clear of the sticky navbar */
+  }
+
+  body {
+    @apply font-body text-teal-900 bg-white antialiased;
+  }
+
+  /* When Amharic is active, use Noto Sans Ethiopic with a touch more line height. */
+  html.font-amharic body {
+    font-family: 'Noto Sans Ethiopic', 'Inter', sans-serif;
+  }
+  html.font-amharic h1,
+  html.font-amharic h2,
+  html.font-amharic h3,
+  html.font-amharic h4 {
+    font-family: 'Noto Sans Ethiopic', 'Sora', sans-serif;
+    line-height: 1.35;
+  }
+
+  /* Visible focus for keyboard users */
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold-500 ring-offset-2 rounded-sm;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    /* The testimonial marquee keeps drifting (it's slow and gentle) —
+       the class selector outranks the universal reset above. */
+    .animate-marquee {
+      animation-duration: 60s !important;
+      animation-iteration-count: infinite !important;
+    }
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-3 font-heading font-semibold text-teal-900 shadow-soft transition duration-200 hover:bg-gold-400 hover:shadow-lift hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-teal-700 px-6 py-3 font-heading font-semibold text-teal-700 transition duration-200 hover:bg-teal-700 hover:text-white hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .section-title {
+    @apply font-heading text-3xl font-bold text-teal-800 sm:text-4xl;
+  }
+  .section-subtitle {
+    @apply mx-auto mt-4 max-w-2xl text-base text-teal-700/70 sm:text-lg;
+  }
+}
