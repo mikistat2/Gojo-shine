@@ -5,7 +5,7 @@ const STORAGE_KEY = 'yesuf-lang'
 
 const LanguageContext = createContext(null)
 
-/** Read the saved language, defaulting to English. */
+/** Read the saved language, defaulting to Amharic. */
 function getInitialLanguage() {
   try {
     const saved = localStorage.getItem(STORAGE_KEY)
@@ -13,7 +13,7 @@ function getInitialLanguage() {
   } catch {
     /* localStorage unavailable (e.g. privacy mode) — fall through to default */
   }
-  return 'en'
+  return 'am'
 }
 
 export function LanguageProvider({ children }) {

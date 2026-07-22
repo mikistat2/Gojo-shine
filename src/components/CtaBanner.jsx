@@ -46,7 +46,7 @@ export default function CtaBanner() {
           <img
             src={cleaningImg}
             alt="cleaner-badge"
-            className="relative -mt-28 h-72 lg:-mt-36 lg:h-96 z-20"
+            className="relative mt-12 h-72 lg:-mt-36 lg:h-96 z-20"
           />
         </div>
       </motion.div>
