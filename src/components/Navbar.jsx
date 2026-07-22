@@ -139,7 +139,11 @@ export default function Navbar() {
             aria-label="Open menu"
             aria-expanded={menuOpen}
             className={`rounded-lg p-2 transition-colors ${
-              scrolled ? 'text-teal-800 hover:bg-teal-50' : 'text-white hover:bg-white/10'
+              menuOpen
+                ? 'bg-white text-teal-800 shadow-soft'
+                : scrolled
+                  ? 'text-teal-800 hover:bg-teal-50'
+                  : 'text-white hover:bg-white/10'
             }`}
           >
             <Menu className="h-6 w-6" aria-hidden="true" />
