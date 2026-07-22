@@ -5,8 +5,8 @@ import { useTranslation } from '../i18n/LanguageContext'
 
 const SERVICE_KEYS = ['home', 'office', 'deep', 'carpet', 'construction', 'window']
 
-const CONTACT_PHONE = '+251 911 234 567'
-const CONTACT_EMAIL = 'hello@yesufcleaning.com'
+const CONTACT_PHONE = '+251 96 563 5149'
+const CONTACT_EMAIL = 'hello@gojoshinecleaning.com'
 
 /* Brand icons drawn inline — lucide-react no longer ships brand logos. */
 const TelegramIcon = (props) => (
@@ -33,10 +33,10 @@ const TikTokIcon = (props) => (
 )
 
 const SOCIALS = [
-  { name: 'Telegram', href: 'https://t.me/yesufcleaning', Icon: TelegramIcon },
-  { name: 'Facebook', href: 'https://facebook.com/yesufcleaning', Icon: FacebookIcon },
-  { name: 'Instagram', href: 'https://instagram.com/yesufcleaning', Icon: InstagramIcon },
-  { name: 'TikTok', href: 'https://tiktok.com/@yesufcleaning', Icon: TikTokIcon },
+  { name: 'Telegram', href: 'https://t.me/gojoshinecleaning', Icon: TelegramIcon },
+  { name: 'Facebook', href: 'https://facebook.com/gojoshinecleaning', Icon: FacebookIcon },
+  { name: 'Instagram', href: 'https://instagram.com/gojoshinecleaning', Icon: InstagramIcon },
+  { name: 'TikTok', href: 'https://tiktok.com/@gojoshinecleaning', Icon: TikTokIcon },
 ]
 
 const inputClasses =
