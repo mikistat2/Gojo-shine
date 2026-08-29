@@ -361,7 +361,7 @@ export const translations = {
     contact: {
       title: 'ያግኙን',
       subtitle: 'ጥያቄዎን ይላኩልን — በአንድ ሰዓት ውስጥ እንመልስልዎታለን።',
-      infoTitle: 'የመገኛ መረጃ',
+      infoTitle: 'እኛን ቀጥታ ያግኙን',
       phone: 'ስልክ',
       email: 'ኢሜይል',
       location: 'አድራሻ',

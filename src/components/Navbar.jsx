@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, Sparkles, X } from 'lucide-react'
 import { useTranslation } from '../i18n/LanguageContext'
-
+import logo from '../assets/images/gogo-shine-logo.png'
 const NAV_LINKS = [
   { key: 'nav.services', href: '#services' },
   { key: 'nav.why', href: '#why-us' },
@@ -89,7 +89,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 shadow-soft backdrop-blur' : 'bg-transparent'
+        scrolled ? 'bg-teal-800/95 shadow-lift backdrop-blur' : 'bg-transparent'
       }`}
     >
       <nav
@@ -97,14 +97,7 @@ export default function Navbar() {
         className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
       >
         {/* Wordmark — white while over the dark hero photo, teal once scrolled */}
-        <a href="#main" className="flex items-center gap-1.5" aria-label={t('brand')}>
-          <Sparkles className="h-6 w-6 text-gold-500" aria-hidden="true" />
-          <Wordmark
-            brand={t('brandShort')}
-            leadClass={`transition-colors ${scrolled ? 'text-teal-800' : 'text-white'}`}
-          />
-        </a>
-
+        <img src={logo} className="w-26 h-20" alt="" />
         {/* Desktop links */}
         <ul className="hidden items-center gap-7 lg:flex">
           {NAV_LINKS.map(({ key, href }) => (
@@ -113,7 +106,7 @@ export default function Navbar() {
                 href={href}
                 className={`text-sm font-medium transition-colors ${
                   scrolled
-                    ? 'text-teal-800/80 hover:text-teal-600'
+                    ? 'text-white/90 hover:text-gold-300'
                     : 'text-white/90 hover:text-white'
                 }`}
               >
@@ -138,13 +131,7 @@ export default function Navbar() {
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
             aria-expanded={menuOpen}
-            className={`rounded-lg p-2 transition-colors ${
-              menuOpen
-                ? 'bg-white text-teal-800 shadow-soft'
-                : scrolled
-                  ? 'text-teal-800 hover:bg-teal-50'
-                  : 'text-white hover:bg-white/10'
-            }`}
+            className="rounded-lg border border-teal-200 bg-white p-2 text-teal-800 shadow-soft transition-colors hover:bg-teal-50"
           >
             <Menu className="h-6 w-6" aria-hidden="true" />
           </button>

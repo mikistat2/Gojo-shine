@@ -6,6 +6,7 @@ import bgImg1 from '../assets/images/hero-bg-1.png'
 import bgImg2 from '../assets/images/hero-bg-2.png'
 import bgImg3 from '../assets/images/hero-bg-3.jpg'
 
+
 const STATS = [
   { valueKey: 'stats.clientsValue', labelKey: 'stats.clients' },
   { valueKey: 'stats.yearsValue', labelKey: 'stats.years' },

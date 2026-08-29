@@ -1,6 +1,6 @@
 import { Sparkles } from 'lucide-react'
 import { useTranslation } from '../i18n/LanguageContext'
-
+import logo from '../assets/images/gogo-shine-logo.png'
 const QUICK_LINKS = [
   { key: 'nav.services', href: '#services' },
   { key: 'nav.why', href: '#why-us' },
@@ -21,7 +21,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-1.5">
-              <Sparkles className="h-6 w-6 text-gold-500" aria-hidden="true" />
+              <img src={logo} className="w-26 h-20" alt="gojo shine logo" />
               <span className="font-heading text-2xl font-extrabold text-white">
                 {t('brandShort')}
               </span>
